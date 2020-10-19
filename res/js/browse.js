@@ -3,13 +3,14 @@ $(document).ready(function() {
         $(".dropdown").toggleClass("show");
     });
     
-    $(".follow").on("click",function(){
+    $(document).on("click",".follow",function(){
+        console.log("clicked");
         var id = $(this).attr("id");
         $("#" + id).toggleClass("followed");
-        if($this.hasClass('followed')){
-            $this.text('Followed');         
+        if($(".follow").hasClass('followed')){
+            $("#" + id).text('Followed');         
         } else {
-            $this.text('Follow');
+            $("#" + id).text('Follow');
         }
     });
 });

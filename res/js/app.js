@@ -3,7 +3,7 @@ $(document).ready(function() {
         $(".dropdown").toggleClass("show");
     });
     
-    $(".like-button").on("click", async function(){
+    $(document).on("click", ".like-button", function(){
         var id = $(this).attr("id");
         $("#" + id).toggleClass("liked");
     });

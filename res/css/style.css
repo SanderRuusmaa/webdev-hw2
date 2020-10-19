@@ -282,6 +282,7 @@ td p{
 }
 
 .follow{
+    border: 1px solid transparent;
     font-size: 1em;
     width: 100px;
     position: relative;
