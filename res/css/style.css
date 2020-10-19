@@ -247,6 +247,7 @@ td p{
     background-color: #ffffff;
     display:flex;
     flex-flow: row wrap;
+    align-content: flex-start;
     min-width: 300px;
 }
 
