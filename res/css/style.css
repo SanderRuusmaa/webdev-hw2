@@ -238,3 +238,64 @@ td p{
     padding: 0;
     margin:0;
 }
+
+.profile-container{
+    width: 50%;
+    min-height: 100%;
+    margin: auto auto;
+    padding: 90px 15px 15px 15px;
+    background-color: #ffffff;
+    display:flex;
+    flex-flow: row wrap;
+    min-width: 300px;
+}
+
+.profile img{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin: 5px;
+}
+
+.profile{
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    display:block;
+    border: 1px solid rgba(223, 223, 223, 0.808);
+    border-radius: 10px;
+    height:100%;
+    padding-left:80px;
+    padding-right:80px;
+}
+
+.profile p{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align:center;
+}
+
+.follow{
+    font-size: 1em;
+    width: 100px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: indigo;
+}
+
+.followed{
+    border: 1px solid indigo;
+    border-radius:15px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    background-color: transparent;
+    color: indigo;
+}

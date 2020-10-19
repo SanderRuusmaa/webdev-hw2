@@ -1,15 +1,13 @@
-
 $(document).ready(function() {
     $(".avatar").click(function(){
         $(".dropdown").toggleClass("show");
     });
     
-    $(".like-button").on("click",function(){
+    $(".like-button").on("click", async function(){
         var id = $(this).attr("id");
         $("#" + id).toggleClass("liked");
     });
 });
-
 
 $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/users/1", function( data ) {
     $( ".result" ).html( data );
@@ -108,4 +106,3 @@ $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/posts", func
         }
     }
 });
-
