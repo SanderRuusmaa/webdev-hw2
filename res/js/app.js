@@ -1,6 +1,15 @@
-$(".avatar").click(function(){
-    $(".dropdown").toggleClass("show");
+
+$(document).ready(function() {
+    $(".avatar").click(function(){
+        $(".dropdown").toggleClass("show");
+    });
+    
+    $(".like-button").on("click",function(){
+        var id = $(this).attr("id");
+        $("#" + id).toggleClass("liked");
+    });
 });
+
 
 $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/users/1", function( data ) {
     $( ".result" ).html( data );
@@ -15,6 +24,8 @@ $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/posts", func
     for(post in data){
         var name = data[post].author.firstname + " " + data[post].author.lastname;
         var avatar = data[post].author.avatar;
+
+        var id = data[post].id;
 
         var postDate = data[post].createTime;
         var likeAmount = data[post].likes;
@@ -43,7 +54,7 @@ $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/posts", func
                 <h3>${text}</h3>
                 </div>
                 <div class="post-actions">
-                <button type="button" name="like" class="like-button">${likeAmount}</button>
+                <button id = "${id}" type="button" name="like" class="like-button">${likeAmount}</button>
                 </div>
                 </div>`);
 
@@ -70,7 +81,7 @@ $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/posts", func
                 <h3>${text}</h3>
                 </div>
                 <div class="post-actions">
-                <button type="button" name="like" class="like-button">${likeAmount}</button>
+                <button id = "${id}" type="button" name="like" class="like-button">${likeAmount}</button>
                 </div>
                 </div>`);
 
@@ -91,9 +102,10 @@ $.get( "https://private-anon-23b167fa18-wad20postit.apiary-mock.com/posts", func
             <h3>${text}</h3>
             </div>
             <div class="post-actions">
-            <button type="button" name="like" class="like-button">${likeAmount}</button>
+            <button id = "${id}" type="button" name="like" class="like-button">${likeAmount}</button>
             </div>
             </div>`);
         }
     }
-})
+});
+
