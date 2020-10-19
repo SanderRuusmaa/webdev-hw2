@@ -4,7 +4,6 @@ $(document).ready(function() {
     });
     
     $(document).on("click",".follow",function(){
-        console.log("clicked");
         var id = $(this).attr("id");
         $("#" + id).toggleClass("followed");
         if($(".follow").hasClass('followed')){
